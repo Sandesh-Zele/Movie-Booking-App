@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(202, 226, 248);
+  color: black;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+}
+
+h1 {
+  color: brown;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.movie-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.movie-container select {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+}
+
+.show {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.show li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.seat {
+  background: #3e4142;
+  height: 32px;
+  width: 28px;
+  margin: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: transform 0.2s;
+}
+
+.seat.selected {
+  background-color: green;
+}
+
+.seat.occupied {
+  background-color: white;
+  cursor: not-allowed;
+  color: black;
+}
+
+.screen {
+  background-color: #213747;
+  height: 70px;
+  width: 100%;
+  max-width: 380px;
+  margin: 20px auto;
+  transform: perspective(100px) rotateX(-10deg);
+  box-shadow: 0 10px 30px rgba(0, 192, 255, 0.3);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.seat:nth-of-type(4) {
+  margin-right: 25px;
+}
+.seat:nth-last-of-type(4) {
+  margin-left: 25px;
+}
+
+.show.seat {
+  cursor: default;
+  transform: none;
+}
+
+.seat:not(.occupied):hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn1 {
+  background-color: rgb(38, 38, 46);
+  color: white;
+  text-align: center;
+  height: 40px;
+  width: auto;
+  font-size: large;
+  border: none;
+  border-radius: 15px;
+  padding: 0 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .seat {
+    height: 28px;
+    width: 24px;
+    margin: 6px;
+  }
+
+  .screen {
+    height: 50px;
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .btn1 {
+    font-size: medium;
+    padding: 0 15px;
+  }
+
+  .movie-container select {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seat {
+    height: 24px;
+    width: 20px;
+    margin: 5px;
+  }
+
+  .screen {
+    height: 40px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .btn1 {
+    font-size: small;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Movie Booking App</h1>
+    <div class="movie-container">
+        <label for="movie">Select Movie:</label>
+        <select name="" id="movie">
+            <option value="220">Mahavatar Narsimha - Rs.220 </option>
+            <option value="180">Mumbai Local - Rs.180 </option>
+            <option value="200">Coolie - Rs.200 </option>
+        </select>
+    </div>
+    <ul class="show">
+        <li><span class="seat"></span> Available</li>
+        <li><span class="seat selected"></span> Selected</li>
+        <li><span class="seat occupied"></span> Occupied</li>
+    </ul>
+    <div class="container">
+        <div class="screen"></div>
+        <div class="row">
+            <div class="seat" data-seat="A1">A1</div>
+            <div class="seat" data-seat="A2">A2</div>
+            <div class="seat" data-seat="A3">A3</div>
+            <div class="seat" data-seat="A4">A4</div>
+            <div class="seat" data-seat="A5">A5</div>
+            <div class="seat" data-seat="A6">A6</div>
+            <div class="seat" data-seat="A7">A7</div>
+            <div class="seat" data-seat="A8">A8</div>
+        </div>
+        <div class="row">
+            <div class="seat" data-seat="B1">B1</div>
+            <div class="seat" data-seat="B2">B2</div>
+            <div class="seat" data-seat="B3">B3</div>
+            <div class="seat" data-seat="B4">B4</div>
+            <div class="seat" data-seat="B5">B5</div>
+            <div class="seat" data-seat="B6">B6</div>
+            <div class="seat" data-seat="B7">B7</div>
+            <div class="seat" data-seat="B8">B8</div>
+        </div>
+        <div class="row">
+            <div class="seat" data-seat="C1">C1</div>
+            <div class="seat" data-seat="C2">C2</div>
+            <div class="seat" data-seat="C3">C3</div>
+            <div class="seat occupied" data-seat="C4">C4</div>
+            <div class="seat occupied" data-seat="C5">C5</div>
+            <div class="seat" data-seat="C6">C6</div>
+            <div class="seat" data-seat="C7">C7</div>
+            <div class="seat" data-seat="C8">C8</div>
+        </div>
+        <div class="row">
+            <div class="seat" data-seat="D1">D1</div>
+            <div class="seat" data-seat="D2">D2</div>
+            <div class="seat" data-seat="D3">D3</div>
+            <div class="seat" data-seat="D4">D4</div>
+            <div class="seat occupied" data-seat="D5">D5</div>
+            <div class="seat" data-seat="D6">D6</div>
+            <div class="seat" data-seat="D7">D7</div>
+            <div class="seat" data-seat="D8">D8</div>
+        </div>
+    </div>
+    <p class="text">
+        You have selected <span id="count">0</span> seats for Rs.<span id="total">0</span>
+    </p>
+    <button class="btn1">Book Ticket</button>
+
+</body>
+<script src="script.js"></script>
+
+</html>
